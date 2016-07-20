@@ -9,10 +9,10 @@ $(document).ready(function() {
 	});
 	
 	//bxslider
-	$('.bxslider').bxSlider({
-	  nextSelector: '#slider-next',
-	  prevSelector: '#slider-prev',
-	  nextText: 'Onward →',
-	  prevText: '← Go back'
+	$('.more_products_slider ul').bxSlider({
+	   	  minSlides: 1,
+		  maxSlides: 3,
+		  slideWidth: 210,
+		  slideMargin: 28
 	});
 });

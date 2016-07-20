@@ -51,7 +51,7 @@
 			text-transform: uppercase;
 			padding-bottom: 5px;
 			margin-bottom: 8px;
-			font-weight: bold;
+			font-family: $bold;
  		}
  		.titles{
  			text-align: center;
@@ -59,10 +59,19 @@
  			h1{
  				font-size: 29px;
  				padding-bottom: 1px;
+ 				font-family: $book;
+ 				text-transform: uppercase;
  			}
  			h2{
 				font-size: 42px;
 				color: #a80000;
+				font-family: $cubano;
+				&.levi{
+ 					font-family: $Levi;
+	 			}
+	 			&.purple{
+	 				color: #8a1dd7;
+	 			}
  			}
  		}
  	}
@@ -137,9 +146,13 @@
 	.more_products{
 		text-align: center;
 		padding: 20px 0 0 0;
+		.container{
+			overflow: visible;
+		}
 	}
 		.title{
 			position: relative;
+			text-align: center;
 			&:before{
 				content: '';
 				background:#515151;
@@ -155,11 +168,38 @@
 				text-transform: uppercase;
 				position: relative;
 				z-index: 2;
+				font-family: $bold;
 				background:url(../img/bg_top.jpg) repeat center;
 			}
 		}
+
 		.more_products_slider{
+			width: 688px;
+			margin: 0 auto;
 			padding: 17px 0 0 0;
+			li a img{
+				border: 1px solid #dadcdd;
+			}
+			.bx-prev, .bx-next{
+				position: absolute;
+				top: 75px;
+				left: -30px;
+				width: 20px;
+				height: 41px;
+				background:url(../img/slider_arrow.png) no-repeat center;
+				@include hide-text;
+			}
+			.bx-next{
+				@include mirror_flip;
+				left: auto;
+				right: -30px;
+			}
+			.bx-pager{
+				display: none;
+			}
+		}
+		.return{
+			padding: 35px 0 0 0;
 		}
 /*----------end main----------*/	
 
@@ -171,3 +211,76 @@
  }
 
 /*----------end footer----------*/
+
+/*------------landing-----------*/
+.bnr_top_text{
+	width: 690px; 
+	padding-bottom: 15px;
+	& > img{
+		float: left;
+		padding: 0 45px 0 0 ;
+	}
+	section{
+		overflow: hidden;
+		padding: 19px 0 0 0 ;
+		color: #000;
+		font-size: 18px;
+	}
+}
+
+.filter_wrap{
+	select{
+		width: 183px;
+		height: 28px;
+		background: #fff url(../img/select.png) no-repeat center right;
+		box-shadow: inset 3px 4px 5px rgba(58,58,56,.29);
+		border: solid 2px #f00;
+		text-transform: uppercase;
+		color: #000;
+		font-size: 13px;
+		-webkit-appearance: none;
+		appearance: none;
+		padding: 0 12px;
+	}
+}
+	.filter_line{
+		overflow: hidden;
+		margin-bottom: 20px;
+		margin-top: 11px;
+		& > div{
+			text-align: center;
+			width: 33%;
+			float: left;
+			box-sizing: border-box;
+		}
+	}
+	.filter_results{
+		text-transform: uppercase;
+		text-align: center;
+		font-family: $bold;
+		font-size: 16px;
+		padding-bottom: 21px;
+		strong{
+			font-family: $bold;
+		}
+		span{
+			color: #fff;
+			background:#0053a0;
+			display: inline-block;
+			padding: 5px 10px;
+			margin: 0 0 0 11px;
+			i{
+				margin-left: 8px;
+			}
+		}
+	}
+.product_list{
+	display: flex;
+	 flex-wrap: wrap;
+ 	 justify-content: space-between;
+ 	 a{
+ 	 	margin-bottom: 20px;
+ 	 	display: block;
+ 	 }
+}
+/*-----------end-landing-----------*/

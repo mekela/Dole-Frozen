@@ -1,4 +1,37 @@
 @font-face {
+  font-family: Proximanova-bold;
+  src: url("../fonts/proximanova-bold.eot");
+  src: url("../fonts/proximanova-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-bold.woff") format("woff"), url("../fonts/proximanova-bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: Proximanova;
+  src: url("../fonts/proximanova-regular.eot");
+  src: url("../fonts/proximanova-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-regular.woff") format("woff"), url("../fonts/proximanova-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: LeviReBrushed;
+  src: url("../fonts/LeviReBrushed.eot");
+  src: url("../fonts/LeviReBrushed.eot?#iefix") format("embedded-opentype"), url("../fonts/LeviReBrushed.woff") format("woff"), url("../fonts/LeviReBrushed.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'CubanoRegular';
+  src: url("../fonts/cubano-regular-webfont.eot");
+  src: url("../fonts/cubano-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/cubano-regular-webfont.woff") format("woff"), url("../fonts/cubano-regular-webfont.ttf") format("truetype"), url("../fonts/cubano-regular-webfont.svg#CubanoRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GothamBook';
+  src: url("../fonts/GothamBook.eot");
+  src: local("GothamBook"), url("../fonts/GothamBook.woff") format("woff"), url("../fonts/GothamBook.ttf") format("truetype"); }
+
+@font-face {
   font-family: 'FontAwesome';
   src: url("../fonts/fontawesome-webfont.eot?v=4.6.3");
   src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
@@ -2248,7 +2281,7 @@ q:before, q:after {
   content: none; }
 
 body {
-  font-family: "Arial";
+  font-family: "Proximanova";
   font-weight: normal;
   font-size: 12px;
   color: #000;
@@ -2289,7 +2322,7 @@ h6 {
   background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
   background-image: linear-gradient(to bottom, #3498db, #2980b9);
   border-radius: 28px;
-  font-family: "Arial";
+  font-family: "Proximanova";
   color: #ffffff;
   font-size: 20px;
   padding: 10px 20px 10px 20px;
@@ -2310,7 +2343,7 @@ input[type=text], input[type=email], input[type=tel], input[type=search], input[
   padding: 0 5px;
   color: #000;
   font-size: 14px;
-  font-family: "Arial";
+  font-family: "Proximanova";
   border: 1px solid #000;
   border-radius: 3px;
   resize: none; }
@@ -2439,17 +2472,24 @@ textarea {
   text-transform: uppercase;
   padding-bottom: 5px;
   margin-bottom: 8px;
-  font-weight: bold; }
+  font-family: "Proximanova-bold"; }
 
 .product_detail .titles {
   text-align: center;
   padding-bottom: 30px; }
   .product_detail .titles h1 {
     font-size: 29px;
-    padding-bottom: 1px; }
+    padding-bottom: 1px;
+    font-family: "GothamBook";
+    text-transform: uppercase; }
   .product_detail .titles h2 {
     font-size: 42px;
-    color: #a80000; }
+    color: #a80000;
+    font-family: "CubanoRegular"; }
+    .product_detail .titles h2.levi {
+      font-family: "LeviReBrushed"; }
+    .product_detail .titles h2.purple {
+      color: #8a1dd7; }
 
 .product_img img {
   display: block;
@@ -2506,9 +2546,12 @@ textarea {
 .more_products {
   text-align: center;
   padding: 20px 0 0 0; }
+  .more_products .container {
+    overflow: visible; }
 
 .title {
-  position: relative; }
+  position: relative;
+  text-align: center; }
   .title:before {
     content: '';
     background: #515151;
@@ -2523,10 +2566,39 @@ textarea {
     text-transform: uppercase;
     position: relative;
     z-index: 2;
+    font-family: "Proximanova-bold";
     background: url(../img/bg_top.jpg) repeat center; }
 
 .more_products_slider {
+  width: 688px;
+  margin: 0 auto;
   padding: 17px 0 0 0; }
+  .more_products_slider li a img {
+    border: 1px solid #dadcdd; }
+  .more_products_slider .bx-prev, .more_products_slider .bx-next {
+    position: absolute;
+    top: 75px;
+    left: -30px;
+    width: 20px;
+    height: 41px;
+    background: url(../img/slider_arrow.png) no-repeat center;
+    font: 0 / 0 a;
+    text-shadow: none;
+    color: transparent; }
+  .more_products_slider .bx-next {
+    -webkit-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+        transform: scale(-1, 1);
+    -webkit-filter: FlipH;
+            filter: FlipH;
+    -ms-filter: "FlipH";
+    left: auto;
+    right: -30px; }
+  .more_products_slider .bx-pager {
+    display: none; }
+
+.return {
+  padding: 35px 0 0 0; }
 
 /*----------end main----------*/
 /*----------footer----------*/
@@ -2535,3 +2607,74 @@ textarea {
   overflow: hidden; }
 
 /*----------end footer----------*/
+/*------------landing-----------*/
+.bnr_top_text {
+  width: 690px;
+  padding-bottom: 15px; }
+  .bnr_top_text > img {
+    float: left;
+    padding: 0 45px 0 0; }
+  .bnr_top_text section {
+    overflow: hidden;
+    padding: 19px 0 0 0;
+    color: #000;
+    font-size: 18px; }
+
+.filter_wrap select {
+  width: 183px;
+  height: 28px;
+  background: #fff url(../img/select.png) no-repeat center right;
+  box-shadow: inset 3px 4px 5px rgba(58, 58, 56, 0.29);
+  border: solid 2px #f00;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 13px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  padding: 0 12px; }
+
+.filter_line {
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-top: 11px; }
+  .filter_line > div {
+    text-align: center;
+    width: 33%;
+    float: left;
+    box-sizing: border-box; }
+
+.filter_results {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Proximanova-bold";
+  font-size: 16px;
+  padding-bottom: 21px; }
+  .filter_results strong {
+    font-family: "Proximanova-bold"; }
+  .filter_results span {
+    color: #fff;
+    background: #0053a0;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 0 0 11px; }
+    .filter_results span i {
+      margin-left: 8px; }
+
+.product_list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .product_list a {
+    margin-bottom: 20px;
+    display: block; }
+
+/*-----------end-landing-----------*/
