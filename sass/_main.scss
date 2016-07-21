@@ -178,7 +178,7 @@
 			margin: 0 auto;
 			padding: 17px 0 0 0;
 			li a img{
-				border: 1px solid #dadcdd;
+				
 			}
 			.bx-prev, .bx-next{
 				position: absolute;
@@ -201,6 +201,46 @@
 		.return{
 			padding: 35px 0 0 0;
 		}
+			.product_item{
+				border: 1px solid #dadcdd;
+				@include povh('');
+				background:#fff;
+				img{
+					display: inline-block;
+				}
+				.product_img{
+					float: left;
+				}
+				.product_item_text{
+					@include povh('');
+					text-align: center;
+					img{
+						max-width: 100%;
+					}
+					small{
+						display: block;
+						font-size: 9.5px;
+						font-family: $book;
+						text-transform: uppercase;
+						padding: 9px 0 3px 0;
+					}
+					.product_title{
+						font-size: 14px;
+						color: #a80000;
+						line-height: 0.95;
+						padding-bottom: 7px;
+						font-family: $cubano;
+						&.wisdom{
+							font-family: $Wisdom;
+							color: #ff4bac;
+						}
+						&.core{
+							font-family: $Core;
+							color: #b618a1;
+						}
+					}
+				}
+			}
 /*----------end main----------*/	
 
 	
@@ -239,8 +279,8 @@
 		color: #000;
 		font-size: 13px;
 		-webkit-appearance: none;
-		appearance: none;
-		padding: 0 12px;
+		appearance: none; 
+		padding: 0 34px 0 12px;
 	}
 }
 	.filter_line{
@@ -284,3 +324,106 @@
  	 }
 }
 /*-----------end-landing-----------*/
+
+		.coverflow-wrapper {
+          position: relative;
+          width: 735px;
+          height: 265px;
+          margin: 10px auto;
+        }
+        
+        .coverflow-wrapper .coverflow {
+          position: relative;
+          width: 440px;
+          height: 265px;
+          margin: 0 auto;
+        }
+        
+        .coverflow-wrapper  .cover {
+          width: 541px;
+          height: 264px;
+        }
+        .coverflow-wrapper  .cover img {
+          width: 100%;
+          height: 100%;
+        }
+        
+        .coverflow-wrapper .buttons {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          text-align: center;
+          z-index: 500;
+          width: 100%;
+        }
+        
+        .coverflow-wrapper .buttons > * {
+          background: url(../img/gal_arrow.png) no-repeat;
+          color: white;
+          width: 11px;
+          height: 92px;
+          position: relative;
+		    top: 80px;
+          @include hide-text;
+          cursor: pointer;
+        }
+        
+        .coverflow-wrapper .buttons .coverflow-next { right: -60px;float: right;
+			@include mirror_flip();
+         }
+        .coverflow-wrapper .buttons .coverflow-prev { left: -60px;float: left; }
+        
+        .coverflow-wrapper .dots {
+          position: absolute;
+          left: 0;
+          right: 0;
+          text-align: center;
+          z-index: 500;
+          width: 100%;
+        }
+        
+        .coverflow-wrapper .dots .coverflow-next,
+        .coverflow-wrapper .dots .coverflow-prev {
+          display: inline-block;
+          vertical-align: middle;
+          color: white;
+          width: 20px;
+          height: 20px;
+          @include hide-text;
+          position: relative;
+          cursor: pointer;
+          &:before{
+          	content: '';
+          	width: 0;
+          	height: 0;
+          	top: 4px;
+          	position: absolute;
+          	@include arr(10,10, #696968, l);
+          }
+        }
+        	.coverflow-wrapper .dots .coverflow-next{
+				&:before{
+        		@include arr(10,10, #696968, r);
+        		}
+        	}
+        
+        .coverflow-wrapper .dots .dots-list {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        
+        .coverflow-wrapper .dots .dots-list .dot {
+          display: inline-block;
+          vertical-align: middle;
+          background: #696968;
+          cursor: pointer;
+          width: 10px;
+          border-radius: 50%;
+          height: 10px;
+          margin: 0 2px;
+        }
+        
+        .coverflow-wrapper .dots .dots-list .dot.active {
+          background: #ff0000;
+        }

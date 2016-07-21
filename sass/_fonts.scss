@@ -3,9 +3,12 @@
 
 //exemple of use:
 //@import url(http://db.onlinewebfonts.com/c/effd74cbf0d7ec814ef5b5c8b44e0988?family=VeneerW01-Two);
+
 @include font(Proximanova-bold, proximanova-bold);
 @include font(Proximanova, proximanova-regular);
 @include font(LeviReBrushed, LeviReBrushed);
+@include font(WisdomScript, WisdomScript);
+@include font(CoreCircus, S-Core-CoreCircusPierrot1);
 
 @font-face {
     font-family: 'CubanoRegular';

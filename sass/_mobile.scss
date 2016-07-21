@@ -4,5 +4,94 @@
 
 //styles for custom device width
 @include mq($max-width: 1000px) {
-  
+  .bnr{
+  	img{
+  		width: 100%;
+  	}
+  }
+}
+
+@include mq($max-width: 716px) {
+	.container{
+		width: auto;
+	}
+	img{
+		max-width: 100%;
+	}
+	.more_products_slider{
+		width: auto;
+		padding:  30px;
+	}
+	.more_products_slider .bx-prev, .more_products_slider .bx-next{
+		left: 5px;
+		top: 95px;
+	}
+		.more_products_slider .bx-next{
+			left: auto;
+			right: 5px;
+		}
+	.product_list a{
+		width: 50%;
+		text-align: center;
+		img{
+			width: 95%;
+		}
+	}
+
+		.coverflow-wrapper {
+          position: relative;
+          width: 100%;
+          height: 265px;
+          margin: 10px auto;
+        }
+        
+        
+}
+
+@include mq($max-width: 550px) {
+	.product_detail aside{
+		width: 100%;
+		float: none;
+		margin-bottom: 30px;
+	}
+	.product_detail article{
+		padding: 0 10px;
+	}
+	.bnr_top_text {
+		img{
+			display: block;
+			margin: 0 auto;
+			float: none;
+			padding-top: 20px;
+		}
+		section{
+			text-align: center;
+			padding: 30px 10px;
+		}
+	}
+	.filter_line > div{
+		display: block;
+		float: none;
+		width: auto;
+		padding: 0 15px;
+		margin: 10px auto;
+	}
+		.filter_wrap select{
+			width: 100%;
+		}
+	.coverflow-wrapper .coverflow {
+      position: relative;
+      width: 100%;
+      height: 265px;
+      margin: 0 auto;
+      img{
+      	width: 100%;
+      }
+    }
+}
+@include mq($max-width: 450px) {
+	.product_list a{
+		width: 100%;
+		text-align: center;
+	}
 }
