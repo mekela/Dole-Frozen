@@ -19,6 +19,8 @@
 			<script src="js/jquery.fancybox.pack.js"></script>
 			<script src="js/modernizr.custom.js"></script>
 			<script src="js/jquery.bxslider.min.js"></script>
+       <script src="js/jquery.roundabout.min.js"></script>      
+      <script src="js/jquery.roundabout-shapes.min.js"></script>      
 			<script src="js/common.js"></script>
 			<!--[if IE]>  
 				<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>  
@@ -41,43 +43,175 @@
 			When you’re prepared with delicious Dole® Frozen Fruit you’ll be ready to whip up a tasty, creative solution no matter how unexpected today turns out to be. 
 		</section>
 	</div>
+
+  <div class="coverflow-wrapper">
+    
+    <div class="buttons">
+      <div class="coverflow-prev"> &lt; </div>
+      <div class="coverflow-next"> &gt; </div>
+    </div>
+  
+    <div class="dots">
+      <div class="coverflow-prev"> &lt; </div>
+      <div class="dots-list"></div>
+      <div class="coverflow-next"> &gt; </div>
+    </div>
+  
+    <div class="coverflow">
+        <div class="cover">
+          <img src="img/banner_landing/banner1.jpg" />
+        </div>
+        <div class="cover">
+          <img src="img/banner_landing/banner2.jpg" />
+        </div>
+        <div class="cover">
+          <img src="img/banner_landing/banner3.jpg" />
+        </div>
+        <div class="cover">
+          <img src="img/banner_landing/banner4.jpg" />
+        </div>
+        <div class="cover">
+          <img src="img/banner_landing/banner5.jpg" />
+        </div>
+        
+        <div class="cover">
+          <img src="img/banner_landing/banner3.jpg" />
+        </div>
+        <div class="cover">
+          <img src="img/banner_landing/banner4.jpg" />
+        </div>
+        <div class="cover">
+          <img src="img/banner_landing/banner5.jpg" />
+        </div>
+    </div>
+  </div>
+
+
 	<div class="filter_wrap container">
 		<div class="title"><span>Search recipes by</span></div>
 		<div class="filter_line">
 			<div>
-				<select>
-					<option>disaster</option>
-					<option>disaster2</option>
+				<select data-filter="disaster">
+					<option value="">disaster</option>
+					<option>Your party just became a trending topic</option>
+          <option>Este &quot;Domingo en familia&quot; es en tu casa te entereaste el sábado</option>
+          <option>Your last trendy recipe got 1 &quot;like&quot; and 18 sad faces</option>
+          <option>You've got a big date and even bigger expectations</option>
+          <option>Today's allergy list was longer than the guest list</option>
 				</select>
 			</div>
 			<div>
-				<select>
-					<option>meal Type</option>
-					<option>disaster2</option>
+				<select data-filter="meal-type">
+					<option value="">meal Type</option>
+					<option>Appetizer</option>
+          <option>Breakfast</option>
+          <option>Side Dish</option>
+          <option>Smoothie</option>
+          <option>Sangria</option>
+          <option>Salad</option>
+          <option>Dessert</option>
 				</select>
 			</div>
 			<div>
-				<select>
-					<option>ingredient</option>
-					<option>disaster2</option>
+				<select data-filter="ingredient">
+					<option value="">ingredient</option>
+					<option>DOLE® Blackberries</option>
+          <option>DOLE® Blueberries</option>
+          <option>DOLE® Mango Chunks</option>
+          <option>DOLE® Raspberries</option>
+          <option>DOLE® Sliced Peaches</option>
+          <option>DOLE® Sliced Strawberries</option>
+          <option>DOLE® Strawberries and Blueberries Mix</option>
+          <option>DOLE® Tropical Gold Pineapple Chunks</option>
+          <option>DOLE® Whole Strawberries</option>
+          <option>DOLE® Wild Blueberries</option>
+          <option>DOLE® Wildly Nutritious Mixed Berries</option>
+          <option>DOLE® Wildly Nutritious Mixed Fruit</option>
+          <option>DOLE® Wildly Nutritious Tropical Medley</option>
 				</select>
 			</div>
 		</div>
 		<div class="filter_results">
 			<strong>result:</strong>
-			<span>beverages <i class="fa fa-times" aria-hidden="true"></i></span>
+      <span class="filter_results_list">
+        <!-- <span>beverages <i class="fa fa-times" aria-hidden="true"></i></span> -->
+      </span>
 		</div>
 	</div>	
 	<div class="container product_list">
-		<a href="#"><img src="img/carousel_img.png" alt=""></a>
-		<a href="#"><img src="img/carousel_img.png" alt=""></a>
-		<a href="#"><img src="img/carousel_img.png" alt=""></a>
-		<a href="#"><img src="img/carousel_img.png" alt=""></a>
-		<a href="#"><img src="img/carousel_img.png" alt=""></a>
-		<a href="#"><img src="img/carousel_img.png" alt=""></a>
-		<a href="#"><img src="img/carousel_img.png" alt=""></a>
-		<a href="#"><img src="img/carousel_img.png" alt=""></a>
-		<a href="#"><img src="img/carousel_img.png" alt=""></a>
+
+    <a href="#" 
+      data-disaster="Your party just became a trending topic"  
+      data-meal-type="Breakfast"  
+      data-ingredient="DOLE® Blueberries"  
+      >
+      <img src="img/carousel_img.png" alt="">
+    </a>
+   
+    <a href="#" 
+      data-disaster="Este &quot;Domingo en familia&quot; es en tu casa te entereaste el sábado"
+      data-meal-type="Appetizer"  
+      data-ingredient="DOLE® Blueberries"  
+      >
+      <img src="img/carousel_img.png" alt="">
+    </a>
+
+    <a href="#" 
+      data-disaster="Your party just became a trending topic"  
+      data-meal-type="Sangria"  
+      data-ingredient="DOLE® Sliced Peaches"  
+      >
+      <img src="img/carousel_img.png" alt="">
+    </a>
+
+    <a href="#" 
+      data-disaster="Your last trendy recipe got 1 &quot;like&quot; and 18 sad faces"  
+      data-meal-type="Smoothie"  
+      data-ingredient="DOLE® Mango Chunks"  
+      >
+      <img src="img/carousel_img.png" alt="">
+    </a>
+
+    <a href="#" 
+      data-disaster="Today's allergy list was longer than the guest list"  
+      data-meal-type="Dessert"  
+      data-ingredient="DOLE® Wild Blueberries"  
+      >
+      <img src="img/carousel_img.png" alt="">
+    </a>
+
+    <a href="#" 
+      data-disaster="Your last trendy recipe got 1 &quot;like&quot; and 18 sad faces"  
+      data-meal-type="Side Dish"  
+      data-ingredient="DOLE® Blueberries"  
+      >
+      <img src="img/carousel_img.png" alt="">
+    </a>
+
+    <a href="#" 
+      data-disaster="You've got a big date and even bigger expectations"  
+      data-meal-type="Breakfast"  
+      data-ingredient="DOLE® Blueberries"  
+      >
+      <img src="img/carousel_img.png" alt="">
+    </a>
+
+    <a href="#" 
+      data-disaster="Your party just became a trending topic"  
+      data-meal-type="Breakfast"  
+      data-ingredient="DOLE® Strawberries and Blueberries Mix"  
+      >
+      <img src="img/carousel_img.png" alt="">
+    </a>
+
+    <a href="#" 
+      data-disaster="You've got a big date and even bigger expectations"  
+      data-meal-type="Dessert"  
+      data-ingredient="DOLE® Strawberries and Blueberries Mix"  
+      >
+      <img src="img/carousel_img.png" alt="">
+    </a>    
+   Este "Domingo en familia" es en tu casa te entereaste el sábado
 	</div>
 	
 </div>
